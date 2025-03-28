@@ -2,15 +2,19 @@
 
 import { Flex, Box } from '@chakra-ui/react';
 import Sidebar from '@/components/Sidebar';
-import MapView from '@/components/MapView';
+import Navbar from '@/components/Navbar';
 
 export default function HomePage() {
   return (
-    <Flex h="100vh">
-      <Sidebar />
-      <Box flex="1" position="relative">
-        <MapView />
-      </Box>
+    <Flex direction="column" h="100vh">
+      <Navbar />
+      <Flex flex="1">
+        <Sidebar />
+        <Box flex="1" p={4} overflowY="auto">
+          <h1>Witaj w Żory 3D App</h1>
+          <p>Tu będzie dynamiczna treść na podstawie wybranych lokalizacji.</p>
+        </Box>
+      </Flex>
     </Flex>
   );
 }

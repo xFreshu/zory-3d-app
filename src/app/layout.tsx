@@ -1,11 +1,16 @@
-import { ReactNode } from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import type { Metadata } from 'next';
+import ChakraWrapper from '../lib/chakra-provider';
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export const metadata: Metadata = {
+  title: 'Żory 3D',
+  description: 'Responsywna aplikacja z Google API',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pl">
       <body>
-        <ChakraProvider>{children}</ChakraProvider>
+        <ChakraWrapper>{children}</ChakraWrapper>
       </body>
     </html>
   );

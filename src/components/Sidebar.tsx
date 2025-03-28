@@ -8,16 +8,7 @@ const Sidebar = () => {
   const [showLocations, setShowLocations] = useState(false);
 
   return (
-    <Box
-      position="fixed"
-      left={0}
-      top={0}
-      w={{ base: 'full', md: '60' }}
-      h="full"
-      bg="gray.800"
-      color="white"
-      p={4}
-    >
+    <Box w={{ base: 'full', md: '60' }} h="full" bg="gray.800" color="white" p={4}>
       <VStack align="start" spacing={4}>
         <Flex align="center" gap={2} cursor="pointer">
           <Icon as={FiHome} />
